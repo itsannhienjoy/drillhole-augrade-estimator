@@ -99,7 +99,7 @@ class ProcessPartA:
         return day_total 
     
     def print_distances_to_point(self, x, y):
-        print(f"\n📍 Distances from new hole at ({x}, {y}):\n" + "-" * 40)
+        print(f"\n* Distances from new hole at ({x}, {y}):\n" + "-" * 40)
         for drillhole in self.data["drillholes"]:
             name = drillhole["Name"]
             dx = drillhole["X"] - x
@@ -128,5 +128,5 @@ class ProcessPartA:
                     total_au_grade += au
                     count += 1
         average_au = total_au_grade / count if count else 0.0
-        print(f"\n Estimate Au grade at ({x}, {y}) from the {n} closest holes: {average_au:.2f}")
+        print(f"\n* Estimate Au grade at ({x}, {y}) from the {n} closest holes: {average_au:.2f}")
         return average_au
